@@ -6,29 +6,26 @@
     <title>Document</title>
 </head>
 <body>
-    
     <input type="text"  id="todo"/>
     <button onclick="addItems()"
 >Save</button>
 <div id="display"> </div>
     <script>
-
+        
         const todoitems = [];
-
-        function addItems()
+        function  addItems()
         {
-            let d =  document.getElementById("todo").value;
+            let d = document.getElementById("todo").value;
 
             todoitems.unshift(d);
 
             display();
-
         }
-function display()
-{
-    let d =todoitems.map(function(value,index) {
 
-        return `<div>${value} <button
+        function display() {
+            let d = todoitems.map(function(value,index){
+
+                return `<div>${value} <button
              onclick="deleteItem(${index})">Delete</button>
              </div>`
     });
@@ -44,10 +41,7 @@ function deleteItem(index)
     display();
 
 }
-
-
-
-
     </script>
+    
 </body>
 </html>
